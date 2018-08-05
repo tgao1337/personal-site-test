@@ -3,30 +3,34 @@ body {
   margin: 0px;
 }
 
+.par {
 
+}
 .nametext {
   margin: 40vh;
   color: white;
 }
 
 .bod {
-  background-color: green;
-  margin-top: 65vh;
+  /* background-color: green; */
+  margin-top: 70vh;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  align-items: center;
 }
 
 .section {
   display: flex;
   flex-direction: row;
-  margin: 8vh 4vw 8vh;
+  margin: 6vh 4vw;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-content: center;
+  /* align-content: center; */
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+
 }
 .left {
   width: 90vw;
@@ -45,28 +49,33 @@ body {
   /* align-content: center; */
 }
 @media screen and (min-width: 28.75em) {
-  .section {
+  /* .section {
     display: flex;
     flex-direction: row;
-    margin: 8vh 4vw 8vh;
+    margin: 6vh 4vw;
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
-  }
+  } */
   .left {
     width: 45vw;
   }
   .right {
     width: 45vw;
   }
+  img {
+    margin-left: 1.5vw;
+  }
   .left img {
-    width: 42.5vw;
+
+    width: 42vw;
 
   }
   .right img {
-    width: 42.5vw;
+    width: 42vw;
+
   }
 }
 /* @media screen and (min-width: 40.5em) {
@@ -85,11 +94,6 @@ body {
 } */
 
 
-/* ==============================================================================================
-Nick Mkrtchyan
-https://www.facebook.com/sonick.pk
-http://www.Mkrtchyan.zz.mu
-================================================================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -176,6 +180,7 @@ header h2{
 .stars {
   background:#000 url(../img/stars.png) repeat top center;
   z-index:0;
+  background-attachment:  fixed;
 }
 
 .twinkling{
@@ -187,15 +192,17 @@ header h2{
   -o-animation:move-twink-back 200s linear infinite;
   -webkit-animation:move-twink-back 200s linear infinite;
   animation:move-twink-back 200s linear infinite;
+  background-attachment:  fixed;
 }
 
 .clouds{
-  background:transparent url(../img/cloud.png) repeat top center;
+  background:transparent url(../img/longcloud.png) repeat top center;
   z-index:3;
 
-  -moz-animation:move-clouds-back 400s linear infinite;
-  -ms-animation:move-clouds-back 400s linear infinite;
-  -o-animation:move-clouds-back 400s linear infinite;
-  -webkit-animation:move-clouds-back 400s linear infinite;
-  animation:move-clouds-back 400s linear infinite;
+  -moz-animation:move-clouds-back 300s linear infinite;
+  -ms-animation:move-clouds-back 300s linear infinite;
+  -o-animation:move-clouds-back 300s linear infinite;
+  -webkit-animation:move-clouds-back 300s linear infinite;
+  animation:move-clouds-back 300s linear infinite;
+  background-attachment:  fixed;
 }
