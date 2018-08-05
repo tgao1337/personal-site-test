@@ -6,7 +6,7 @@
     <title>Tommy Gao</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-
+    <!-- <link rel="icon" type="image/png" href="img/tommypix.png"> -->
 
   </head>
   <body>
@@ -84,9 +84,26 @@
     <div>
 
       <div class="gridcontainer">
-        <div class="box a">verifood</div>
-        <div class="box b">topopt</div>
-        <div class="box c">burger clicker</div>
+        <div class="box a">
+          <h4>VeriFood</h4>
+          <p>Winner of the 2018 AngelHack San Francisco Trulioo identity verification challenge. Verifood is a identity verification platform for the homeless to access digital food stamps.</p>
+        </div>
+        <div class="box b">
+          <h4>Truss Comparison</h4>
+          <p>Comparing the effectiveness of the Michell truss theory and topology optimization methods of creating truss</p>
+          <!-- <button type="button" href="https://www.scienceandmathacademy.com/academics/srt4/student_work/2018/gao_tommy.pdf">Learn More</button> -->
+        </div>
+        <div class="box c">
+          <h4>Burger Clicker</h4>
+          <p>Click the button to earn more burgers.</p>
+          <button type="button" class="bt" onclick="clickCounter()">Burger Button</button>
+          <img id="bicon" src="img/Gamburger.png" alt="Burger">
+          <div id="burger"></div>
+        </div>
+        <div class="box d">
+          <h4>Computer Aided Design</h4>
+          <img src="img/cadplane.png" alt="CAD Plane">
+        </div>
       </div>
 
     </div>
@@ -100,9 +117,29 @@
 
 
   <footer class="text-center footer">
-    <small>&copy; <script>new Date().getFullYear()>2017&&document.write(new Date().getFullYear());</script>, Tommy Gao. Made in San Francisco.</small>
+    <small>&copy; <script>new Date().getFullYear()>2017&&document.write(new Date().getFullYear());</script> by Tommy Gao. Made in San Francisco.</small>
   </footer>
+  <script>
+  function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+      // localStorage.clear();
+      if (localStorage.burgercount) {
+        localStorage.burgercount = Number(localStorage.burgercount)+1;
+      } else {
+        localStorage.burgercount = 1;
+      }
+      if (localStorage.burgercount==1) {
+        document.getElementById("burger").innerHTML = "You have " + localStorage.burgercount + " burger.";
+      }
+      else {
+        document.getElementById("burger").innerHTML = "You have " + localStorage.burgercount + " burgers.";
 
+      }
+    } else {
+      document.getElementById("burger").innerHTML = "Sorry, your browser does not support this super cool game.";
+    }
+  }
+  </script>
 
 
 
