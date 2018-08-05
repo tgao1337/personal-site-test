@@ -146,30 +146,31 @@ li {
   grid-template-columns: 1fr;
   justify-content: center;
 
-  grid-template-areas: "a"
-  "b"
-  "c"
-  "d";
+   grid-template-areas: "a"
+                        "b"
+                        "c";
 }
+
+
 
 .a {
   grid-area: a;
-  background-color: #FE6D64;
+  background-color: #C3FF7F;
 }
 
 .b {
   grid-area: b;
-  background-color: #C3FF7F;
+  background-color: #9988FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .c {
   grid-area: c;
-  background-color: #9988FF;
-}
-
-.d {
-  grid-area: d;
-  background-color: #228866;
+  background-color: #FE6D64;
 }
 
 .box {
@@ -180,11 +181,50 @@ li {
   align-items: center;
   text-align: center;
   align-content: center;
+
 }
 #bicon {
   width: 3em;
   margin-bottom: 1em;
 }
+.social {
+  padding-bottom: 2vh;
+}
+.so {
+  color: black;
+  font-size: 2em;
+}
+.so:hover {
+  filter: invert(75%);
+}
+.bt {
+  padding: 1em;
+  border-radius: .8em;
+  background-color: #2196F3;
+  border: 0;
+  color: white;
+  margin: 1em;
+
+}
+.bt:hover {
+  background-color: blue;
+
+}
+.bx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from { transform: translate3d(0, 0, 0);     }
+  to   { transform: translate3d(0, 8px, 0); }
+}
+
 @media screen and (min-width: 28.75em) {
   .section {
     display: flex;
@@ -214,8 +254,12 @@ li {
     width: 45vw;
   }
   img {
-    margin-left: 1.5vw;
+    /* margin-left: .5vw; */
     margin-top: 1vh;
+
+  }
+  .b img {
+    margin: 1vh;
   }
   .left img {
 
@@ -266,16 +310,14 @@ li {
     margin-top: .8vh;
   }
   .gridcontainer {
-    width: 90vw;
+    width: 95vw;
     display: grid;
     grid-gap: 1vh;
   margin-top: 4vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-
-    grid-template-areas: "a a b b"
-                         "a a b b"
-                         "c c d d"
-                         "c c d d";
+    margin-left: 2vw;
+    grid-template-areas: "a b"
+                         "a c";
   }
 
   .box {
@@ -285,11 +327,30 @@ li {
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 46vw;
   }
   .box img {
 
     width: 38vw;
     margin-top: 1.2vh;
+  }
+  .bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+    animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  }
+  .tal {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  .tal img{
+    width: 30vw;
+    margin-left: 5vw;
   }
 
 }
